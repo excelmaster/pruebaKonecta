@@ -15,7 +15,7 @@
 		public function conectarse(){
 			$enlace = mysqli_connect($this->host, $this->user, $this->password, $this->dataBase);
 			if($enlace){
-				echo "conectado a Konecta Cafe";	
+				//echo "conectado a Konecta Cafe";	
 			}else{
 				die('Error de Conexión (' . mysqli_connect_errno() . ') '.mysqli_connect_error());
 			}
