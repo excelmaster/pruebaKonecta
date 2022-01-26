@@ -59,12 +59,12 @@
                                 <td><?= $value['categoria']; ?></td>
                                 <td><?= $value['stock']; ?></td>
 								<td class="text-center">
-									<a href="./index.php?page=edit&id=<?= $value['id'] ?>&folder=users" title="Editar usuario: <?= $value['name'].' '.$value['last_name'] ?>">
+									<a href="./index.php?page=editar&id=<?= $value['id'] ?>&folder=productos" title="Editar Producto: <?= $value['name'] ?>">
 										<i class="material-icons btn_edit">edit</i>
 									</a>
 								</td>
 								<td class="text-center">
-									<a href="#" onclick="objUser.deleteUser(<?= $value["id"] ?>)" id="btnDeleteUser" title="Borrar usuario: <?= $value['name'].' '.$value['last_name'] ?>">
+									<a href="#" onclick="objUser.deleteUser(<?= $value["id"] ?>)" id="btnDeleteUser" title="Borrar Producto: <?= $value['name'] ?>">
 										<i class="material-icons btn_delete">delete_forever</i>
 									</a>
 								</td>

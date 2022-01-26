@@ -49,5 +49,35 @@
 				return false;
 			}
 		}
+
+		//Obtiene el usuario por id
+		public function getProductById($id=NULL){
+			if(!empty($id)){
+				$query  ="SELECT * FROM productos WHERE id=".$id;
+				$result =mysqli_query($this->link,$query);
+				$data   =array();
+				while ($data[]=mysqli_fetch_assoc($result));
+				array_pop($data);
+				return $data;
+			}else{
+				return false;
+			}
+		}
+
+		//edita el usuario por id
+		public function setEditProduct($data){
+			if(!empty($data['id'])){
+				$query  ="UPDATE productos SET nombre='".$data['nombre']."',referencia='".$data['referencia']."', precio=".$data['precio'].", peso=".$data["peso"].", categoria='".$data["categoria"]."',stock=".$data["stock"]." WHERE id=".$data['id'];
+				$result =mysqli_query($this->link,$query);
+				if($result){
+					return true;
+				}else{
+					return false;
+				}
+			}else{
+				return false;
+			}
+		}
+
     }
 ?>
