@@ -27,11 +27,15 @@ CREATE TABLE IF NOT EXISTS `productos` (
   `stock` int(11) NOT NULL,
   `create_date` date NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
 
--- Volcando datos para la tabla konectacafe.productos: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla konectacafe.productos: ~3 rows (aproximadamente)
 DELETE FROM `productos`;
 /*!40000 ALTER TABLE `productos` DISABLE KEYS */;
+INSERT INTO `productos` (`id`, `nombre`, `referencia`, `precio`, `peso`, `categoria`, `stock`, `create_date`) VALUES
+	(1, 'club social', 'csg', 500, 80, 'galletas', 10, '2022-01-26'),
+	(2, 'festival', 'csg', 500, 80, 'galletas', 10, '2022-01-26'),
+	(3, 'masmelos ', 'smmsfam', 46465, 65, 'golosina', 3614646, '0000-00-00');
 /*!40000 ALTER TABLE `productos` ENABLE KEYS */;
 
 -- Volcando estructura para tabla konectacafe.ventas
@@ -40,12 +44,17 @@ CREATE TABLE IF NOT EXISTS `ventas` (
   `id_producto` int(11) NOT NULL,
   `cantidad` int(11) NOT NULL,
   `fecha` date NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  PRIMARY KEY (`id`),
+  KEY `FK1_producto` (`id_producto`),
+  CONSTRAINT `FK1_producto` FOREIGN KEY (`id_producto`) REFERENCES `productos` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
 
 -- Volcando datos para la tabla konectacafe.ventas: ~0 rows (aproximadamente)
 DELETE FROM `ventas`;
 /*!40000 ALTER TABLE `ventas` DISABLE KEYS */;
+INSERT INTO `ventas` (`id`, `id_producto`, `cantidad`, `fecha`) VALUES
+	(1, 1, 2, '0000-00-00'),
+	(2, 2, 1, '2122-01-26');
 /*!40000 ALTER TABLE `ventas` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
