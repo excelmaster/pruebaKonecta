@@ -18,7 +18,7 @@
 ?>
 <div class="row">
 	<div class="col text-center">
-		<i class="material-icons" style="font-size: 80px;">people</i>
+		<i class="material-icons" style="font-size: 80px;">redeem</i>
 	</div>
 </div>
 <div class="row">

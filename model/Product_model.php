@@ -41,7 +41,7 @@
 
 		//Crea un nuevo usuario
 		public function newProduct($data){
-			$query  ="INSERT INTO users (name, last_name, email) VALUES ('".$data['name']."','".$data['last_name']."','".$data['email']."')";
+			$query  ="INSERT INTO productos (nombre, referencia, precio, peso,categoria,stock) VALUES ('".$data['nombre']."','".$data['referencia']."','".$data['precio']."','".$data['peso']."','".$data['categoria']."','".$data['stock']."')";
 			$result =mysqli_query($this->link,$query);
 			if(mysqli_affected_rows($this->link)>0){
 				return true;
