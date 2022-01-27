@@ -9,7 +9,17 @@
 		if($productos->newProduct($_POST)){
 			header('location: ../index.php?page=nuevo&success=true&folder='.$_GET['folder']);
 		}else{
-			header('location: ../index.php?page=listado&error=true&folder='.$_GET['folder']);
+			header('location: ../index.php?page=nuevo&error=true&folder='.$_GET['folder']);
+		}
+	}
+
+	//Request: editar usuario
+	if(isset($_POST['edit']))
+	{
+		if($productos->setEditProduct($_POST)){
+			header('location: ../index.php?page=editar&id='.$_POST['id'].'&success=true&folder='.$_GET['folder']);
+		}else{
+			header('location: ../index.php?page=editar&id='.$_POST['id'].'&error=true&folder='.$_GET['folder']);
 		}
 	}
 ?>

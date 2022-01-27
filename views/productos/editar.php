@@ -27,8 +27,8 @@
     </div>
   </div>
   <div class="form-group">
-  	 <label for="name">Nombre</label>
-    <input type="text" class="form-control" id="name" name="name" placeholder="Nombre del producto" autofocus required value="<?php echo $nombre; ?>">
+  	 <label for="nombre">Nombre</label>
+    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre del producto" autofocus required value="<?php echo $nombre; ?>">
   </div>
   <div class="form-group">
   	 <label for="referencia">Referencia</label>

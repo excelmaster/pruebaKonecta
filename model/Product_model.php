@@ -68,6 +68,7 @@
 		public function setEditProduct($data){
 			if(!empty($data['id'])){
 				$query  ="UPDATE productos SET nombre='".$data['nombre']."',referencia='".$data['referencia']."', precio=".$data['precio'].", peso=".$data["peso"].", categoria='".$data["categoria"]."',stock=".$data["stock"]." WHERE id=".$data['id'];
+				echo $query;
 				$result =mysqli_query($this->link,$query);
 				if($result){
 					return true;
