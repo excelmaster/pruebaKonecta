@@ -18,6 +18,9 @@
 ?>
 <div class="row">
 	<div class="col text-center">
+	<div class="alert alert-secondary" role="alert">
+        Listado de productos
+        </div>
 		<i class="material-icons" style="font-size: 80px;">redeem</i>
 	</div>
 </div>

@@ -23,6 +23,9 @@
 <form action="./controller/Productos.php?folder=<?= $_GET['folder']; ?>" method="POST">
   <div class="row">
     <div class="col text-center">
+    <div class="alert alert-secondary" role="alert">
+        Editando el producto :<h3> <?php echo $nombre ?></h3>
+        </div>
       <i class="material-icons" style="font-size: 80px;">edit</i>
     </div>
   </div>
