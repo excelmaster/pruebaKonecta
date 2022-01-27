@@ -42,13 +42,13 @@
   		if(isset($_GET['success'])){
 	?>
 			<div class="alert alert-success">
-				El producto ha sido creado.
+        El producto ha sido creado.
 			</div>
 	<?php
   		}else if(isset($_GET['error'])){
   	?>
 			<div class="alert alert-danger">
-				Ha ocurrido un error al crear el producto, por favor intente de nuevo.
+        Ha ocurrido un error al crear el producto, por favor intente de nuevo.
 			</div>
 	<?php
   		}
