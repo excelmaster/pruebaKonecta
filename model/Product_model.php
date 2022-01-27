@@ -80,5 +80,19 @@
 			}
 		}
 
+		//Borra el usuario por id
+		public function deleteProducto($id=NULL){
+			if(!empty($id)){
+				$query  ="DELETE FROM productos WHERE id=".$id;
+				$result =mysqli_query($this->link,$query);
+				if(mysqli_affected_rows($this->link)>0){
+					return true;
+				}else{
+					return false;
+				}
+			}else{
+				return false;
+			}
+		}
     }
 ?>

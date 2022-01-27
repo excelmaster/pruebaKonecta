@@ -9,6 +9,7 @@ class Productos{
 				var response   = JSON.parse(this.responseText);
 				var msgSuccess = document.getElementById('msgSuccess');
 				var msgDanger   = document.getElementById('msgDanger');
+				console.log("response:: " + response);
 				if(response.success){
 					// alert("El usuario ha sido borrado de la base de datos.");
 					msgSuccess.style.display = 'inherit';
@@ -23,13 +24,14 @@ class Productos{
 					// location.reload(true);
 				}else if(response.error){
 					// alert("No se ha podido eliminar el registro");
+					console.log(response.error);
 					msgDanger.style.display  = 'inherit';
 					msgDanger.innerHTML      = 'No se ha podido eliminar el producto';
 					msgSuccess.style.display = 'none';
 				}
 			}
 			};
-			xhttp.open("GET", "./controllers/controller.php?delete=true&id="+id, true);
+			xhttp.open("GET", "./controller/Productos.php?delete=true&id="+id, true);
 			xhttp.send();
 		}
 	}

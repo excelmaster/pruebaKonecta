@@ -64,7 +64,7 @@
 									</a>
 								</td>
 								<td class="text-center">
-									<a href="#" onclick="objUser.deleteUser(<?= $value["id"] ?>)" id="btnDeleteUser" title="Borrar Producto: <?= $value['name'] ?>">
+									<a href="#" onclick="objProduct.deleteProductos(<?= $value["id"] ?>)" id="btnDeleteUser" title="Borrar Producto: <?= $value['name'] ?>">
 										<i class="material-icons btn_delete">delete_forever</i>
 									</a>
 								</td>

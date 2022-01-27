@@ -22,4 +22,14 @@
 			header('location: ../index.php?page=editar&id='.$_POST['id'].'&error=true&folder='.$_GET['folder']);
 		}
 	}
+
+	//Request: eliminar usuario
+	if(isset($_GET['delete']))
+	{
+		if($productos->deleteProducto($_GET['id'])){
+			echo json_encode(["success"=>true]);
+		}else{
+			echo json_encode(["error"=>true]);
+		}
+	}
 ?>
